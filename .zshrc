@@ -28,5 +28,6 @@ alias ports='sudo lsof -i -P | grep LISTEN'
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias l.='ls -d .* --color=auto'
+alias vim='nvim'
 PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
 echo -e "\033]50;SetProfile=under-the-sea-tweaked\a"
