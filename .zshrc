@@ -1,3 +1,4 @@
+export PATH=$PATH:/opt/homebrew/bin
 # Ensure in tmux
 if [ "$TMUX" = "" ]; then tmux; fi
 # FS Specific
@@ -10,7 +11,7 @@ autoload -U colors && colors
 # Kubernetes Context Helper
 if [ -f ${HOME}/.kube/config ]; then
   source ~/.zsh/plugins/kubernetes-context.bash
-  RPROMPT="%F{yellow}"$(kubernetes-context)
+  RPROMPT="%F{yellow}"$(kubernetes-context)"%F{reset_color}"
 fi
 # Silence direnv output
 export DIRENV_LOG_FORMAT=""
