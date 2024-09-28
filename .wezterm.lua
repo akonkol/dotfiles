@@ -6,8 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 -- For example, changing the color scheme:
-wezterm.font("MesloLGS NF")
-config.font_size = 13
+wezterm.font("MesloLGS NF", { weight = 'Bold',  size = 13})
 config.colors = {
 	foreground = "#a0a8cd",
 	background = "111111",
