@@ -4,10 +4,9 @@ return {
     dependencies = {
 		{"nvim-lua/plenary.nvim"},
 		{'nvim-telescope/telescope-fzf-native.nvim',
-			build = 'make'},
+			build = "make"},
     },
     config = function()
-      require("telescope").load_extension("fzf")
       require("telescope").setup {
         extensions = {
           fzf = {
@@ -19,6 +18,7 @@ return {
           },
        }
       }
+      require("telescope").load_extension("fzf")
 
         -- set keymaps
         local keymap = vim.keymap
