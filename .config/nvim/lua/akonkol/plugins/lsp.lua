@@ -36,7 +36,6 @@ return {
 						capabilities = capabilities
 					}
 				end,
-				print(
 
 				["lua_ls"] = function()
 					local lspconfig = require("lspconfig")
