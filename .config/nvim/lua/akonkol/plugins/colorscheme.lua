@@ -1,8 +1,13 @@
 return {
-    "tiagovla/tokyodark.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-        vim.cmd("colorscheme tokyodark")
-    end,
+	"rebelot/kanagawa.nvim",
+	lazy = false,
+	config = function()
+		require("kanagawa").setup({
+			theme = "dragon",
+			background = {
+				dark = "dragon", -- try "dragon" !
+			},
+		})
+		vim.cmd("colorscheme kanagawa")
+	end
 }
