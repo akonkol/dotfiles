@@ -11,10 +11,6 @@ return {
 	config = function()
 		require("telescope").setup {
 			preview = true,
-			previewer = require('telescope.previewers').new_buffer_previewer {
-				wrap = true,
-			},
-			-- Set the layout strategy for the preview window
 			layout_strategy = "horizontal",
 			layout_config = {
 				horizontal = {
@@ -35,7 +31,7 @@ return {
 					override_file_sorter = true,
 					case_mode = "smart_case",
 				},
-			}
+			},
 		}
 		require("telescope").load_extension("fzf")
 
@@ -47,5 +43,6 @@ return {
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>",
 			{ desc = "Find string under cursor in cwd" })
+		keymap.set("n", "<leader>fc", "<cmd>Telescope git commits<cr>", { desc = "Find todos" })
 	end,
 }
