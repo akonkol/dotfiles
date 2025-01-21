@@ -33,8 +33,8 @@ echo -e "\033]50;SetProfile=under-the-sea-tweaked\a"
 if [ -e /usr/local/bin/brew ]; then eval "$(/usr/local/bin/brew shellenv)"; else eval "$(/opt/homebrew/bin/brew shellenv)"; fi
 
 # For zsh files not checked into git
-if [ -d "${HOME}/.local" ]; then
-for FILE in ${HOME}/.local/*; do
+if [ -d "${HOME}/.local_rc" ]; then
+for FILE in ${HOME}/.local_rc/*; do
     source $FILE
 done
 fi
